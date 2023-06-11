@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARA MEU MOMOH</title>
+    
+<style>
+    *{margin:0;padding:0;box-sizing:0 border-box;}
+
+    body {
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    background-image: url(images/background.png);
+    background-size: cover;
+    }
+
+    form{
+         border-color: white;
+         max-width: 500px;
+         width: 70%;
+         padding: 20px;
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+    }
+
+    form h3{
+        text-align: center;
+        font-size: 25px;
+        text-shadow: 10px;
+        color: white;
+    }
+
+     form input[type=text],
+     form input[type=password]{
+        width: 100%;
+        height: 30px;
+        border: 1px solid black;
+        margin: 10px 0;
+     }
+
+     form input[type=submit]{
+        width: 100%;
+        height: 30px;
+        cursor: pointer;
+        border: 0;
+        border-radius: 20px;
+        border: 0;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        transition: 3s;
+     }
+
+     button{
+        width: 100%;
+        height: 30px;
+        cursor: pointer;
+        border: 0;
+        border-radius: 20px;
+        border: 0;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        transition: 3s;
+     }
+
+     button:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+    background-color: darkred;
+  } 
+
+     .fundo {
+    background-color: rgba(0, 0, 0, 0.466);
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 0px;
+    opacity: 85%; 
+    position: absolute;
+    left: 42%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    }
+
+    form input[type=submit]:hover{
+        background-color: darkred;
+    }
+
+</style>
+<script>
+    var verificacao = 280405160605;
+    function red(){
+    var veri =  parseInt(document.getElementById("sn").value);
+    if(veri == verificacao){
+
+        window.location.replace("https://drive.google.com/drive/folders/1_07Z2j1yka2sx74Q2X0LP1TuESCzuvdV?usp=sharing")
+    }else{
+        window.location.replace("error.html");
+    }
+
+    }
+    
+</script>
+</head>
+<body>
+    <div id="barra">
+        <div id="loader" class="loader"></div>
+    </div>
+    <div id="content" class="content"></div>
+        <div class="fundo">
+            <form>
+                <h3>Digite a senha</h3>
+                <input type="text" name="senha" placeholder="Senha..." id="sn">
+                <button type="button" onclick="red()">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
